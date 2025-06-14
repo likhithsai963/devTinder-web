@@ -46,7 +46,8 @@ const Chat = () => {
 
   const sendMessage = () => {
     const socket = createSocketConnection();
-    socket.emit("senMessage", {
+    console.log("likj")
+    socket.emit("sendMessage", {
       firstName: user?.firstName,
       lastName : user?.lastName,
       userId,
