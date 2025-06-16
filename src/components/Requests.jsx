@@ -9,7 +9,7 @@ const Requests = () => {
   const requests = useSelector((store) => store.requests);
   const reviewRequest = async (status, _id) =>{
     try {
-        const res = await axios.post(BASE_URL + "/requests/review"+status+"/"+_id,{},{withCredentials:true});
+        const res = await axios.post(BASE_URL + "/requests/review/"+status+"/"+_id,{},{withCredentials:true});
         dispatch(removeRequest(_id))
        console.log(res) 
 
